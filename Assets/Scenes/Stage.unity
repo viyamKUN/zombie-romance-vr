@@ -1102,6 +1102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1400856872}
   - component: {fileID: 1400856873}
+  - component: {fileID: 1400856874}
   m_Layer: 0
   m_Name: GameData
   m_TagString: Untagged
@@ -1135,6 +1136,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5764501fc9ef246f28737700e702d0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stageNum: 5
+  _csvReader: {fileID: 1400856874}
+--- !u!114 &1400856874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400856871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd2e8ed094f44c9cb388a647caaa576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelCsvFile: {fileID: 0}
 --- !u!1001 &1439935862
 PrefabInstance:
   m_ObjectHideFlags: 0
