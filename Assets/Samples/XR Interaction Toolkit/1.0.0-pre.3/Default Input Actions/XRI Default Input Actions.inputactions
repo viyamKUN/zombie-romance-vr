@@ -538,7 +538,7 @@
                     "id": "fa59aed1-ae0b-4074-a58c-294b85f46228",
                     "path": "<XRController>{RightHand}/triggerPressed",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "AxisDeadzone(min=0.4)",
                     "groups": "Generic XR Controller",
                     "action": "Activate",
                     "isComposite": false,
