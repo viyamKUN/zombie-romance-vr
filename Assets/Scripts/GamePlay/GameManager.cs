@@ -14,6 +14,11 @@ public class GameManager : MonoBehaviour
     bool _isHaveCardKey = false;
     float _startTime = 0;
 
+    public static GameManager GM = null;
+    private void Awake()
+    {
+        GM = this;
+    }
     void Start()
     {
         // Data Setting
@@ -74,6 +79,16 @@ public class GameManager : MonoBehaviour
             // 의심치 크기에 따라 좀비가 달려드는 여부 판정
             if (_doubt > 1) _doubt = 1;
             _gameMainUI.SetdouptBar(_doubt);
+        }
+    }
+
+    public int Bullet
+    {
+        get => _bulletCount;
+        set
+        {
+            _bulletCount = value;
+            _gameMainUI.SetBulletCount(_bulletCount);
         }
     }
 
