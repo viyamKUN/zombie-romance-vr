@@ -10,20 +10,33 @@ public class GameMainUI : MonoBehaviour
     [SerializeField] private Image _douptBar = null;
     [SerializeField] private Image _cardKeyImage = null;
     [SerializeField] private Text _bulletCountText = null;
+    [SerializeField] private Text _timerText = null;
 
     [SerializeField] private GameObject _endPanel = null;
     [SerializeField] private GameObject _overPanel = null;
 
+    [Header("Game clear Panel")]
+    [SerializeField] private Text _hpText = null;
+    [SerializeField] private Text _timeText = null;
+    [SerializeField] private Button _nextButton = null;
 
+
+    public void SetTimerText(string value) => _timerText.text = value;
     public void GetCardKey() => _cardKeyImage.color = Color.white;
     public void SetHPBar(float value) => _hpBar.fillAmount = value;
     public void SetdouptBar(float value) => _douptBar.fillAmount = value;
     public void SetBulletCount(int cnt) => _bulletCountText.text = cnt.ToString();
 
-    public void ShowEndPanel(float time, float hp)
+    public void ShowEndPanel(string time, float hp)
     {
         _endPanel.SetActive(true);
-        // 만약 다음 스테이지가 없으면 next는 지우기
+
+        _hpText.text = (int)(hp * 100) + "%";
+        _timeText.text = time;
+
+        int next = PlayerPrefs.GetInt("nowPlaying", 0) + 1;
+        if (next > 4)
+            _nextButton.interactable = false;
     }
     public void ShowGameOverPanel()
     {
@@ -40,7 +53,8 @@ public class GameMainUI : MonoBehaviour
     }
     public void ClickGoToNext()
     {
-        PlayerPrefs.SetInt("nowPlaying", PlayerPrefs.GetInt("nowPlaying", 0) + 1);
+        int next = PlayerPrefs.GetInt("nowPlaying", 0) + 1;
+        PlayerPrefs.SetInt("nowPlaying", next);
         PlayerPrefs.Save();
         _changeScene.CallScene(SceneName.Game);
     }
