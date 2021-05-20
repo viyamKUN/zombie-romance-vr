@@ -10,11 +10,13 @@ public class GameMainUI : MonoBehaviour
     [SerializeField] private Image _douptBar = null;
     [SerializeField] private Image _cardKeyImage = null;
     [SerializeField] private Text _bulletCountText = null;
+    [SerializeField] private Text _timerText = null;
 
     [SerializeField] private GameObject _endPanel = null;
     [SerializeField] private GameObject _overPanel = null;
 
 
+    public void SetTimerText(string value) => _timerText.text = value;
     public void GetCardKey() => _cardKeyImage.color = Color.white;
     public void SetHPBar(float value) => _hpBar.fillAmount = value;
     public void SetdouptBar(float value) => _douptBar.fillAmount = value;

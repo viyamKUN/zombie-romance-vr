@@ -24,9 +24,15 @@ public class GameManager : MonoBehaviour
 
         _startTime = Time.time;
         int nowStage = PlayerPrefs.GetInt("nowPlaying", 0);
-        Instantiate(_stageLevels[nowStage], Vector3.zero, Quaternion.identity);
+        Instantiate(_stageLevels[nowStage]);
     }
-
+    private void Update()
+    {
+        float playTime = Time.time - _startTime;
+        int min = (int)(playTime / 60);
+        int sec = (int)(playTime % 60);
+        _gameMainUI.SetTimerText((min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec);
+    }
     void endGame()
     {
         float playTime = Time.time - _startTime;
@@ -44,12 +50,18 @@ public class GameManager : MonoBehaviour
         _gameMainUI.GetCardKey();
     }
 
-    ///<summary>Call when go into door</summary>
-    public void EnterDoor(out bool completeGetIn)
+    ///<summary>Call when use Card key</summary>
+    public bool UseCardKey()
     {
-        completeGetIn = _isHaveCardKey;
-        if (!_isHaveCardKey)
-            return;
+        if (!_isHaveCardKey) return false;
+
+        /// Call Door Open
+        return true;
+    }
+
+    ///<summary>Call when go into door</summary>
+    public void EnterDoor()
+    {
         endGame();
     }
 
