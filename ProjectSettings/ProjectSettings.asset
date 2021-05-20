@@ -146,6 +146,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+    Android: com.Team2.zombieromancevr
     Standalone: com.Team2.zombie-romance-vr
   buildNumber:
     Standalone: 0
