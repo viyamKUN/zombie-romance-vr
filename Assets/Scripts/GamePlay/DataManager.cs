@@ -15,7 +15,7 @@ public class DataManager : MonoBehaviour
         isGameDataExist = LoadGame();
     }
 
-    public void Init(string name = "")
+    public void Init(string name = "Guest")
     {
         _mySaveData = new SaveData(name, _stageNum);
         SaveGame();
@@ -48,5 +48,9 @@ public class DataManager : MonoBehaviour
         var filename = SaveFileName.PlayerDataFileName;
         File.Delete(filename);
     }
-}
 
+    public string UserName
+    {
+        get => _mySaveData.UserName; set => _mySaveData.UserName = value;
+    }
+}
