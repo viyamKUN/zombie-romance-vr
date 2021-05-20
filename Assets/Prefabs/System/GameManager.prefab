@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dataManager: {fileID: 2207775740048866211}
+  _gameMainUI: {fileID: 9171367772377211220}
 --- !u!114 &9171367772377211220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +59,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2aef8f5b53c49ccb25e481bed058c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hpBar: {fileID: 0}
+  _douptBar: {fileID: 0}
+  _cardKeyImage: {fileID: 0}
+  _bulletCountText: {fileID: 0}
 --- !u!1001 &5157907679942430810
 PrefabInstance:
   m_ObjectHideFlags: 0
