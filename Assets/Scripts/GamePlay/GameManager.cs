@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private DataManager _dataManager = null;
     [SerializeField] private GameMainUI _gameMainUI = null;
 
+    [SerializeField] private GameObject[] _stageLevels = null;
+
     float _hp = 1.0f;
     float _doubt = 0.5f;
     int _bulletCount = 1;
@@ -21,6 +23,8 @@ public class GameManager : MonoBehaviour
             _dataManager.Init();
 
         _startTime = Time.time;
+        int nowStage = PlayerPrefs.GetInt("nowPlaying", 0);
+        Instantiate(_stageLevels[nowStage], Vector3.zero, Quaternion.identity);
     }
 
     void endGame()
