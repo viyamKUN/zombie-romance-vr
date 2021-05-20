@@ -15,6 +15,11 @@ public class GameMainUI : MonoBehaviour
     [SerializeField] private GameObject _endPanel = null;
     [SerializeField] private GameObject _overPanel = null;
 
+    [Header("Game clear Panel")]
+    [SerializeField] private Text _hpText = null;
+    [SerializeField] private Text _timeText = null;
+    [SerializeField] private Button _nextButton = null;
+
 
     public void SetTimerText(string value) => _timerText.text = value;
     public void GetCardKey() => _cardKeyImage.color = Color.white;
@@ -25,7 +30,10 @@ public class GameMainUI : MonoBehaviour
     public void ShowEndPanel(float time, float hp)
     {
         _endPanel.SetActive(true);
-        // 만약 다음 스테이지가 없으면 next는 지우기
+
+        int next = PlayerPrefs.GetInt("nowPlaying", 0) + 1;
+        if (next > 4)
+            _nextButton.interactable = false;
     }
     public void ShowGameOverPanel()
     {
@@ -42,7 +50,8 @@ public class GameMainUI : MonoBehaviour
     }
     public void ClickGoToNext()
     {
-        PlayerPrefs.SetInt("nowPlaying", PlayerPrefs.GetInt("nowPlaying", 0) + 1);
+        int next = PlayerPrefs.GetInt("nowPlaying", 0) + 1;
+        PlayerPrefs.SetInt("nowPlaying", next);
         PlayerPrefs.Save();
         _changeScene.CallScene(SceneName.Game);
     }
