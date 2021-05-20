@@ -13,4 +13,10 @@ public class FollowItem : MonoBehaviour
             Vector3.ProjectOnPlane(target.right, Vector3.up).normalized * offset.x +
             Vector3.ProjectOnPlane(target.forward, Vector3.up).normalized * offset.z;
     }
+
+    public void getKey()
+    {
+        GameManager.GM.GetCardkey();
+        Debug.Log("get card key");
+    }
 }

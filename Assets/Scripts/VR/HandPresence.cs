@@ -57,8 +57,8 @@ public class HandPresence : MonoBehaviour
         }
         else //show hand in MockHMD
         {
-            spawnedHandModel = Instantiate(handmodelPrefab, transform);
-            handAnimator = spawnedHandModel.GetComponent<Animator>();
+            //spawnedHandModel = Instantiate(handmodelPrefab, transform);
+            //handAnimator = spawnedHandModel.GetComponent<Animator>();
         }
 
     }

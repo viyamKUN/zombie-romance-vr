@@ -194,7 +194,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 55600978}
+        m_TargetAssemblyTypeName: FollowItem, Assembly-CSharp
+        m_MethodName: getKey
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -4728,6 +4740,7 @@ GameObject:
   - component: {fileID: 1154232614}
   - component: {fileID: 1154232617}
   - component: {fileID: 1154232618}
+  - component: {fileID: 1154232619}
   m_Layer: 6
   m_Name: XR Rig
   m_TagString: Player
@@ -4958,6 +4971,19 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
     m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &1154232619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154232608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0c33863d780dc459fb9a43c154aecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 2043788724036597192, guid: f52879a16d794dd4c9feab9d7c270f6d, type: 3}
 --- !u!1 &1177204537
 GameObject:
   m_ObjectHideFlags: 0
@@ -5345,9 +5371,9 @@ GameObject:
   - component: {fileID: 1596896060}
   - component: {fileID: 1596896065}
   - component: {fileID: 1596896064}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CardKey
-  m_TagString: Untagged
+  m_TagString: CardKey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5564,7 +5590,7 @@ GameObject:
   - component: {fileID: 1667273954}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
