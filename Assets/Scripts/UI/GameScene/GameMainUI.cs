@@ -27,9 +27,12 @@ public class GameMainUI : MonoBehaviour
     public void SetdouptBar(float value) => _douptBar.fillAmount = value;
     public void SetBulletCount(int cnt) => _bulletCountText.text = cnt.ToString();
 
-    public void ShowEndPanel(float time, float hp)
+    public void ShowEndPanel(string time, float hp)
     {
         _endPanel.SetActive(true);
+
+        _hpText.text = (int)(hp * 100) + "%";
+        _timeText.text = time;
 
         int next = PlayerPrefs.GetInt("nowPlaying", 0) + 1;
         if (next > 4)

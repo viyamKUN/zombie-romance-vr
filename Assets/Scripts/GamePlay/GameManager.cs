@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private DataManager _dataManager = null;
     [SerializeField] private GameMainUI _gameMainUI = null;
-
     [SerializeField] private GameObject[] _stageLevels = null;
 
     float _hp = 1.0f;
@@ -36,12 +35,31 @@ public class GameManager : MonoBehaviour
     void endGame()
     {
         float playTime = Time.time - _startTime;
-        _gameMainUI.ShowEndPanel(playTime, _hp);
+        int min = (int)(playTime / 60);
+        int sec = (int)(playTime % 60);
+        string timeStr = (min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec;
+
+        _gameMainUI.ShowEndPanel(timeStr, _hp);
 
         // TODO 게임 클리어 정보 전달
         _dataManager.SaveGame();
     }
 
+
+    public float HP
+    {
+        get => _hp;
+        set
+        {
+            _hp = value;
+            if (_hp < 0)
+            {
+                _hp = 0;
+                Dead();
+            }
+            _gameMainUI.SetHPBar(_hp);
+        }
+    }
 
     ///<summary>Call when get cardkey</summary>
     public void GetCardkey()
