@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
         _startTime = Time.time;
         int nowStage = PlayerPrefs.GetInt("nowPlaying", 0);
         Instantiate(_stageLevels[nowStage]);
+
+        _gameMainUI.SetHPBar(_hp);
+        _gameMainUI.SetdouptBar(_doubt);
+        _gameMainUI.SetBulletCount(_bulletCount);
     }
     private void Update()
     {
@@ -58,6 +62,18 @@ public class GameManager : MonoBehaviour
                 Dead();
             }
             _gameMainUI.SetHPBar(_hp);
+        }
+    }
+
+    public float Doupt
+    {
+        get => _doubt;
+        set
+        {
+            _doubt = value;
+            // 의심치 크기에 따라 좀비가 달려드는 여부 판정
+            if (_doubt > 1) _doubt = 1;
+            _gameMainUI.SetdouptBar(_doubt);
         }
     }
 
