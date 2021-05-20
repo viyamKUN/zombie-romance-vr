@@ -7,8 +7,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private DataManager _dataManager = null;
     [SerializeField] private GameMainUI _gameMainUI = null;
 
+    float _hp = 1.0f;
+    float _doubt = 0.5f;
+    int _bulletCount = 1;
     bool _isHaveCardKey = false;
     float _startTime = 0;
+
     void Start()
     {
         // Data Setting
@@ -21,8 +25,8 @@ public class GameManager : MonoBehaviour
 
     void endGame()
     {
-        float remainHP = 0;
         float playTime = Time.time - _startTime;
+        _gameMainUI.ShowEndPanel(playTime, _hp);
 
         // TODO 게임 클리어 정보 전달
         _dataManager.SaveGame();
@@ -33,6 +37,7 @@ public class GameManager : MonoBehaviour
     public void GetCardkey()
     {
         _isHaveCardKey = true;
+        _gameMainUI.GetCardKey();
     }
 
     ///<summary>Call when go into door</summary>
@@ -47,6 +52,6 @@ public class GameManager : MonoBehaviour
     ///<summary>Call when you dead</summary>
     public void Dead()
     {
-
+        _gameMainUI.ShowGameOverPanel();
     }
 }
