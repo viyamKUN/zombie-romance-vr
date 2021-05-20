@@ -55,10 +55,10 @@ public class HandPresence : MonoBehaviour
             spawnedHandModel = Instantiate(handmodelPrefab, transform);
             handAnimator = spawnedHandModel.GetComponent<Animator>();
         }
-        else //show hand in MockHMD 
-        { 
-            //spawnedHandModel = Instantiate(handmodelPrefab, transform); 
-            //handAnimator = spawnedHandModel.GetComponent<Animator>(); 
+        else //show hand in MockHMD
+        {
+            spawnedHandModel = Instantiate(handmodelPrefab, transform);
+            handAnimator = spawnedHandModel.GetComponent<Animator>();
         }
 
     }
@@ -69,7 +69,8 @@ public class HandPresence : MonoBehaviour
         if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue) && triggerValue > 0.1f)
         {
             handAnimator.SetFloat("Trigger", triggerValue);
-        } else
+        }
+        else
         {
             handAnimator.SetFloat("Trigger", 0);
         }
@@ -87,10 +88,12 @@ public class HandPresence : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!targetDevice.isValid)
+        if (!targetDevice.isValid)
         {
             TryInitialize();
-        } else {
+        }
+        else
+        {
             spawnedHandModel.SetActive(!showController);
             spawnedController.SetActive(showController);
 
