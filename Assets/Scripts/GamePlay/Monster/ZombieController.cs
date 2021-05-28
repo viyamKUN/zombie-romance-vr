@@ -28,6 +28,7 @@ public class ZombieController : MonoBehaviour
     {
         if (GameManager.GM.Doupt >= 1.0)
         {
+            if (_myStatus.Equals(ZombieStatus.Talk)) return;
             if (_myStatus.Equals(ZombieStatus.Attack)) return;
             attackPlayer();
             _myStatus = ZombieStatus.Attack;
@@ -52,11 +53,16 @@ public class ZombieController : MonoBehaviour
         _zombieAnim.SetTrigger("attack");
         GameManager.GM.HP -= 0.1f;
     }
+
+
+    Coroutine tempCoro = null;
     private void talkToPlayer()
     {
         Debug.Log("Hello???");
         GameManager.GM.Doupt += 0.1f;
-        StartCoroutine(tempTalkWaiting());
+        if (tempCoro != null)
+            StopCoroutine(tempCoro);
+        tempCoro = StartCoroutine(tempTalkWaiting());
     }
     IEnumerator tempTalkWaiting()
     {
