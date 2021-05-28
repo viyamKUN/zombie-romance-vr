@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ConversationModles;
 
 public class GameManager : MonoBehaviour
 {
@@ -118,5 +119,21 @@ public class GameManager : MonoBehaviour
     public void Dead()
     {
         _gameMainUI.ShowGameOverPanel();
+    }
+    ZombieController _currentZombie = null;
+    public void CallConversation(ZombieController zc)
+    {
+        _currentZombie = zc;
+        _gameMainUI.CallConversation(_dataManager.GetRandomConversation());
+    }
+    public void EndConversation(bool isCorrect)
+    {
+        _gameMainUI.EndConversation();
+        if (!isCorrect)
+        {
+            Doupt += 0.1f;
+        }
+        _currentZombie.EndConversation();
+        _currentZombie = null;
     }
 }

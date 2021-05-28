@@ -56,4 +56,8 @@ public class DataManager : MonoBehaviour
     {
         get => _mySaveData.UserName; set => _mySaveData.UserName = value;
     }
+    public Conversation GetRandomConversation()
+    {
+        return _conversationList[Random.Range(0, _conversationList.Count)];
+    }
 }

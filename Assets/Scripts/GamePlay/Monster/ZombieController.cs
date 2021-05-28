@@ -54,19 +54,9 @@ public class ZombieController : MonoBehaviour
         GameManager.GM.HP -= 0.1f;
     }
 
-
-    Coroutine tempCoro = null;
     private void talkToPlayer()
     {
         Debug.Log("Hello???");
-        GameManager.GM.Doupt += 0.1f;
-        if (tempCoro != null)
-            StopCoroutine(tempCoro);
-        tempCoro = StartCoroutine(tempTalkWaiting());
-    }
-    IEnumerator tempTalkWaiting()
-    {
-        yield return new WaitForSeconds(2.0f);
-        EndConversation();
+        GameManager.GM.CallConversation(this);
     }
 }

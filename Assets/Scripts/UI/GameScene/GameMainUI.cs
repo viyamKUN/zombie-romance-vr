@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using ConversationModles;
 
 public class GameMainUI : MonoBehaviour
 {
+    [SerializeField] private ConversationUI _conversationUI = null;
     [SerializeField] private ChangeScene _changeScene = null;
     [SerializeField] private Image _hpBar = null;
     [SerializeField] private Image _douptBar = null;
@@ -57,5 +59,14 @@ public class GameMainUI : MonoBehaviour
         PlayerPrefs.SetInt("nowPlaying", next);
         PlayerPrefs.Save();
         _changeScene.CallScene(SceneName.Game);
+    }
+    public void CallConversation(Conversation c)
+    {
+        _conversationUI.gameObject.SetActive(true);
+        _conversationUI.SetConversationUI(c);
+    }
+    public void EndConversation()
+    {
+        _conversationUI.gameObject.SetActive(false);
     }
 }
