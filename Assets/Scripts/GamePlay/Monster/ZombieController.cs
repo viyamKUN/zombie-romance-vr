@@ -12,16 +12,15 @@ public class ZombieController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Bullet"))
         {
             this.Hit();
         }
     }
 
-    public void attackPlayer()
+    public void AttackPlayer()
     {
         _zombieAnim.SetTrigger("attack");
         //GameManager.GM.HP -= 0.1f;
-        
     }
 }
