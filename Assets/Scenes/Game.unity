@@ -1886,7 +1886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -4983,7 +4983,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f0c33863d780dc459fb9a43c154aecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombie: {fileID: 2043788724036597192, guid: f52879a16d794dd4c9feab9d7c270f6d, type: 3}
 --- !u!1 &1177204537
 GameObject:
   m_ObjectHideFlags: 0

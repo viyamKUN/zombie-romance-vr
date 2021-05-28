@@ -17,10 +17,25 @@ public class ZombieController : MonoBehaviour
             this.Hit();
         }
     }
-
-    public void AttackPlayer()
+    public void HitToPlayer()
+    {
+        if (GameManager.GM.Doupt >= 1.0)
+        {
+            attackPlayer();
+        }
+        else
+        {
+            talkToPlayer();
+        }
+    }
+    private void attackPlayer()
     {
         _zombieAnim.SetTrigger("attack");
-        //GameManager.GM.HP -= 0.1f;
+        GameManager.GM.HP -= 0.1f;
+    }
+    private void talkToPlayer()
+    {
+        Debug.Log("Hello???");
+        GameManager.GM.Doupt += 0.1f;
     }
 }
