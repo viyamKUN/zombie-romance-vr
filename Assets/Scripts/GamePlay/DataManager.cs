@@ -2,6 +2,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Collections.Generic;
 using UnityEngine;
+using ConversationModles;
 
 public class DataManager : MonoBehaviour
 {
@@ -9,9 +10,11 @@ public class DataManager : MonoBehaviour
     [SerializeField] private CSVReader _csvReader = null;
     private SaveData _mySaveData;
 
+    private List<Conversation> _conversationList = null;
+
     public void SetData(out bool isGameDataExist)
     {
-        // _csvReader.Read(out _creatureList, out _itemList);
+        _conversationList = _csvReader.readConversation();
         isGameDataExist = LoadGame();
     }
 
