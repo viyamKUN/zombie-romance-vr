@@ -2,19 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ZombieStatus
+{
+    Idle, Walking, Talk, Attack, Dead
+}
 public class ZombieController : MonoBehaviour
 {
     [SerializeField] private Animator _zombieAnim = null;
+    ZombieStatus _myStatus = ZombieStatus.Idle;
 
     public void Hit()
     {
         _zombieAnim.SetTrigger("Die");
+        _myStatus = ZombieStatus.Dead;
     }
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
             this.Hit();
+            GameManager.GM.Doupt += 0.2f;
         }
     }
     public void HitToPlayer()
@@ -22,11 +29,21 @@ public class ZombieController : MonoBehaviour
         if (GameManager.GM.Doupt >= 1.0)
         {
             attackPlayer();
+            _myStatus = ZombieStatus.Attack;
         }
         else
         {
             talkToPlayer();
+            _myStatus = ZombieStatus.Talk;
         }
+    }
+    public void EndConversation()
+    {
+        _myStatus = ZombieStatus.Idle;
+    }
+    public void EndAttackMotion()
+    {
+        _myStatus = ZombieStatus.Idle;
     }
     private void attackPlayer()
     {
@@ -37,5 +54,11 @@ public class ZombieController : MonoBehaviour
     {
         Debug.Log("Hello???");
         GameManager.GM.Doupt += 0.1f;
+        StartCoroutine(tempTalkWaiting());
+    }
+    IEnumerator tempTalkWaiting()
+    {
+        yield return new WaitForSeconds(2.0f);
+        EndConversation();
     }
 }
