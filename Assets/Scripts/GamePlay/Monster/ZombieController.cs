@@ -28,11 +28,13 @@ public class ZombieController : MonoBehaviour
     {
         if (GameManager.GM.Doupt >= 1.0)
         {
+            if (_myStatus.Equals(ZombieStatus.Attack)) return;
             attackPlayer();
             _myStatus = ZombieStatus.Attack;
         }
         else
         {
+            if (_myStatus.Equals(ZombieStatus.Talk)) return;
             talkToPlayer();
             _myStatus = ZombieStatus.Talk;
         }
