@@ -3,7 +3,9 @@ using System.Collections;
 
 public class door : MonoBehaviour {
 	GameObject thedoor;
+	private bool isDoorOpen = false;
 
+	/*
 	void OnTriggerEnter ( Collider obj  ){
 		thedoor= GameObject.FindWithTag("SF_Door");
 		if(obj.gameObject.CompareTag("Player"))
@@ -13,20 +15,24 @@ public class door : MonoBehaviour {
 		}
 		//thedoor.GetComponent<Animation>().Play("open");
 	}
+	*/
 
-	void OnTriggerExit ( Collider obj  ){
-		thedoor= GameObject.FindWithTag("SF_Door");
-		thedoor.GetComponent<Animation>().Play("close");
-		GameManager.GM.EnterDoor();
+	void OnTriggerExit ( Collider obj  )
+	{
+		if(isDoorOpen)
+		{
+			thedoor= GameObject.FindWithTag("SF_Door");
+			thedoor.GetComponent<Animation>().Play("close");
+			GameManager.GM.EnterDoor();
+		}
 	}
 
 	public void OpenDoor()
 	{
-		Debug.Log("open the door");
 		thedoor= GameObject.FindWithTag("SF_Door");
 		thedoor.GetComponent<Animation>().Play("open");
 		GameManager.GM.UseCardKey();
-		Debug.Log("open the door");
+		isDoorOpen = true;
 	}
 	/*
 	public void CloseDoor()
