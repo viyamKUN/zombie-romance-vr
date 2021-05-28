@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class CollideZombie : MonoBehaviour
 {
-    [SerializeField] private ZombieController zombie;
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(hit.gameObject.CompareTag("Zombie"))
+        if (hit.gameObject.CompareTag("Zombie"))
         {
-            zombie.attackPlayer();
+            hit.gameObject.GetComponent<ZombieController>().AttackPlayer();
         }
     }
-    
 }

@@ -59,3 +59,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelCsvFile: {fileID: 0}
+  _conversationFile: {fileID: 4900000, guid: 0c1de4cc7a86c40cda912fd2cf9cafa0, type: 3}
