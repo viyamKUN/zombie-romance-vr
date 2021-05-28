@@ -8,7 +8,7 @@ public class CollideZombie : MonoBehaviour
     {
         if (hit.gameObject.CompareTag("Zombie"))
         {
-            hit.gameObject.GetComponent<ZombieController>().AttackPlayer();
+            hit.gameObject.GetComponent<ZombieController>().HitToPlayer();
         }
     }
 }
