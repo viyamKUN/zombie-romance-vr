@@ -1027,9 +1027,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3030788606487537561}
   - component: {fileID: 3280097529599515543}
+  - component: {fileID: 4216334740669669952}
+  - component: {fileID: 6370844428744149266}
+  - component: {fileID: -1637443469457749210}
   m_Layer: 0
   m_Name: Zom
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1042,7 +1045,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2397136020636040483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.37}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2332280485379123068}
@@ -1060,7 +1063,7 @@ Animator:
   m_GameObject: {fileID: 2397136020636040483}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cec568c8d122bea43a183e932ddc547e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8b254c0c744f3cc4ba271202b7e44324, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1069,6 +1072,48 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4216334740669669952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2397136020636040483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7c2098c1a3848babb54243f0dc8967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _zombieAnim: {fileID: 3280097529599515543}
+--- !u!54 &6370844428744149266
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2397136020636040483}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &-1637443469457749210
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2397136020636040483}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.42068374, y: 1.8469229, z: 0.4689145}
+  m_Center: {x: 0.0011792779, y: 0.90586495, z: -0.004500866}
 --- !u!1 &2549432094150221956
 GameObject:
   m_ObjectHideFlags: 0
