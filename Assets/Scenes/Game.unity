@@ -3751,15 +3751,15 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 1667273952}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 0.3
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 267248801
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &879284557
 RectTransform:
@@ -6121,8 +6121,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1667273952}
     - target: {fileID: 6233372303784793700, guid: 03634a80b845c4ad7843076789dd3e2e, type: 3}
-      propertyPath: m_RenderMode
+      propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6233372303784793700, guid: 03634a80b845c4ad7843076789dd3e2e, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6233372303784793703, guid: 03634a80b845c4ad7843076789dd3e2e, type: 3}
       propertyPath: m_Pivot.x
