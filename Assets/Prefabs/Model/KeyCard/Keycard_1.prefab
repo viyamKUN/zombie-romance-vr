@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3579066768960878750}
   - component: {fileID: 6372196233159074953}
   - component: {fileID: -4788175149448297914}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Keycard_1
-  m_TagString: Untagged
+  m_TagString: CardKey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
