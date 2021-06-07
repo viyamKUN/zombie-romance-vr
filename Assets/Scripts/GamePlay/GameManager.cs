@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] _stageLevels = null;
 
     float _hp = 1.0f;
-    float _doubt = 0.5f;
+    float _doubt = 1f;
     int _bulletCount = 1;
     bool _isHaveCardKey = false;
     float _startTime = 0;
