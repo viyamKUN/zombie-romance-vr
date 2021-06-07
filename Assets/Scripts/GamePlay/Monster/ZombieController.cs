@@ -6,8 +6,19 @@ public enum ZombieStatus
 {
     Idle, Walking, Talk, Attack, Dead
 }
+public enum AudioName
+{
+    Idle, Walking, Die, Attack
+}
 public class ZombieController : MonoBehaviour
 {
+    [Header("음악")]
+    [SerializeField] private AudioSource _loopingAudio = null;
+    [SerializeField] private AudioSource _audio = null;
+    [SerializeField] private AudioClip[] _clips = null;
+    Coroutine playAudioCoro = null;
+    AudioName currentAudio = AudioName.Idle;
+    [Header("비주얼")]
     [SerializeField] private Animator _zombieAnim = null;
     [SerializeField] private float _speed = 1;
     ZombieStatus _myStatus = ZombieStatus.Idle;
@@ -37,11 +48,13 @@ public class ZombieController : MonoBehaviour
 
                 _zombieAnim.SetBool("isWalk", true);
                 _myStatus = ZombieStatus.Walking;
+                changeLoopingAudio(AudioName.Walking);
             }
             else
             {
                 _zombieAnim.SetBool("isWalk", false);
                 _myStatus = ZombieStatus.Idle;
+                changeLoopingAudio(AudioName.Idle);
                 attackPlayer();
             }
         }
@@ -51,6 +64,8 @@ public class ZombieController : MonoBehaviour
         _zombieAnim.SetTrigger("Die");
         _myStatus = ZombieStatus.Dead;
         isAlive = false;
+        _loopingAudio.Stop();
+        _audio.PlayOneShot(_clips[(int)AudioName.Die]);
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -89,6 +104,7 @@ public class ZombieController : MonoBehaviour
         _zombieAnim.SetTrigger("attack");
         _myStatus = ZombieStatus.Attack;
         GameManager.GM.HP -= 0.1f;
+        playAudioOnce(AudioName.Attack);
     }
 
     private void talkToPlayer()
@@ -97,4 +113,31 @@ public class ZombieController : MonoBehaviour
         _myStatus = ZombieStatus.Talk;
         GameManager.GM.CallConversation(this);
     }
+    private void changeLoopingAudio(AudioName a)
+    {
+        if (currentAudio.Equals(a)) return;
+        currentAudio = a;
+        _loopingAudio.Stop();
+        _loopingAudio.clip = _clips[(int)a];
+        _loopingAudio.Play();
+    }
+    private void playAudioOnce(AudioName a)
+    {
+        if (playAudioCoro != null)
+        {
+            StopCoroutine(playAudioCoro);
+            playAudioCoro = null;
+        }
+        playAudioCoro = StartCoroutine(playAudio(a));
+    }
+    IEnumerator playAudio(AudioName a)
+    {
+        _loopingAudio.Pause();
+        _audio.PlayOneShot(_clips[(int)a]);
+
+        yield return new WaitForSeconds(3f);
+
+        _loopingAudio.Play();
+    }
+
 }
