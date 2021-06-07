@@ -1028,9 +1028,9 @@ GameObject:
   - component: {fileID: 3030788606487537561}
   - component: {fileID: 3280097529599515543}
   - component: {fileID: 4216334740669669952}
-  - component: {fileID: 6370844428744149266}
   - component: {fileID: -1637443469457749210}
-  m_Layer: 0
+  - component: {fileID: 6370844428744149266}
+  m_Layer: 7
   m_Name: Zom
   m_TagString: Zombie
   m_Icon: {fileID: 0}
@@ -1085,6 +1085,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _zombieAnim: {fileID: 3280097529599515543}
+  _speed: 3
+--- !u!65 &-1637443469457749210
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2397136020636040483}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.42068374, y: 1.8469229, z: 0.4689145}
+  m_Center: {x: 0.0011792779, y: 0.90586495, z: -0.004500866}
 --- !u!54 &6370844428744149266
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1099,21 +1113,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
---- !u!65 &-1637443469457749210
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2397136020636040483}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.42068374, y: 1.8469229, z: 0.4689145}
-  m_Center: {x: 0.0011792779, y: 0.90586495, z: -0.004500866}
 --- !u!1 &2549432094150221956
 GameObject:
   m_ObjectHideFlags: 0
