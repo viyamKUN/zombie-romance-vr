@@ -32,6 +32,7 @@ public class ZombieController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (!isAlive) return;
         if (GameManager.GM.Doupt >= 1.0)
         {
             if (_myStatus.Equals(ZombieStatus.Attack)) return;
