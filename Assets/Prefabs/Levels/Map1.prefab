@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1693205778652202400}
   - component: {fileID: 3798277002696797389}
   - component: {fileID: 4366685604070067805}
+  - component: {fileID: 8347403649036388112}
   m_Layer: 0
   m_Name: Crate Short (11)
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8347403649036388112
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337517271983933323}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.66834116, y: 0.5996588, z: 0.6713793}
+  m_Center: {x: 0.334275, y: 0.29982942, z: 0.33568954}
 --- !u!1 &1108661898054972840
 GameObject:
   m_ObjectHideFlags: 0
@@ -82799,11 +82813,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfef738579cd02c40b3b1d63e67b0f84, type: 3}
---- !u!4 &5770789924614821040 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: cfef738579cd02c40b3b1d63e67b0f84, type: 3}
-  m_PrefabInstance: {fileID: 5770789924615212592}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5873769797808530382 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114318827644022270, guid: cfef738579cd02c40b3b1d63e67b0f84, type: 3}
@@ -82815,6 +82824,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1975310f9e226ad41be662562353f030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &5770789924614821040 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: cfef738579cd02c40b3b1d63e67b0f84, type: 3}
+  m_PrefabInstance: {fileID: 5770789924615212592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5770789925025170079
 PrefabInstance:
   m_ObjectHideFlags: 0
