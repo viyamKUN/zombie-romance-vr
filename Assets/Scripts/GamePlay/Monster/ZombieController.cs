@@ -18,9 +18,15 @@ public class ZombieController : MonoBehaviour
     [SerializeField] private AudioClip[] _clips = null;
     Coroutine playAudioCoro = null;
     AudioName currentAudio = AudioName.Idle;
+
     [Header("비주얼")]
     [SerializeField] private Animator _zombieAnim = null;
     [SerializeField] private float _speed = 1;
+
+    [Header("시스템")]
+    [SerializeField] private BoxCollider _collider = null;
+    [SerializeField] private Rigidbody _rigid = null;
+
     ZombieStatus _myStatus = ZombieStatus.Idle;
     Transform _playerTransform = null;
     Vector3 _move = Vector3.zero;
@@ -32,6 +38,7 @@ public class ZombieController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (!isAlive) return;
         if (GameManager.GM.Doupt >= 1.0)
         {
             if (_myStatus.Equals(ZombieStatus.Attack)) return;
@@ -66,6 +73,8 @@ public class ZombieController : MonoBehaviour
         isAlive = false;
         _loopingAudio.Stop();
         _audio.PlayOneShot(_clips[(int)AudioName.Die]);
+        _rigid.useGravity = false;
+        _collider.enabled = false;
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -104,6 +113,7 @@ public class ZombieController : MonoBehaviour
         _zombieAnim.SetTrigger("attack");
         _myStatus = ZombieStatus.Attack;
         GameManager.GM.HP -= 0.1f;
+        SoundManager.SM.PlayAudio(SoundName.PlayerHit);
         playAudioOnce(AudioName.Attack);
     }
 

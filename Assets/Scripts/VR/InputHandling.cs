@@ -8,6 +8,7 @@ public class InputHandling : MonoBehaviour
     public void GetBullet(SelectEnterEventArgs args)
     {
         GameManager.GM.Bullet += 1;
+        SoundManager.SM.PlayAudio(SoundName.GetItem);
     }
 
     public void UseBullet(SelectExitEventArgs args)

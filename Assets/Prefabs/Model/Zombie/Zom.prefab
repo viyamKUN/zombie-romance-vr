@@ -1094,6 +1094,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6b726f9643952ee44a5ca9ea99675802, type: 3}
   _zombieAnim: {fileID: 3280097529599515543}
   _speed: 3
+  _collider: {fileID: -1637443469457749210}
+  _rigid: {fileID: 6370844428744149266}
 --- !u!65 &-1637443469457749210
 BoxCollider:
   m_ObjectHideFlags: 0

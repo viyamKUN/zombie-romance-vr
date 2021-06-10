@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class StageUI : MonoBehaviour
 {
     [SerializeField] private GameObject _clearStamp = null;
+    [SerializeField] private Text _stageNumber = null;
     [SerializeField] private Text _remainHPtext = null;
     [SerializeField] private Text _playTime = null;
     StagesUIManager _uiManager = null;
@@ -14,6 +15,7 @@ public class StageUI : MonoBehaviour
     {
         this._uiManager = uiManager;
         this.thisStageID = id;
+        _stageNumber.text = (id + 1).ToString();
         if (!isClear)
         {
             this._clearStamp.SetActive(false);

@@ -48,10 +48,12 @@ public class GameMainUI : MonoBehaviour
     public void ClickGoToRestart()
     {
         _changeScene.CallScene(SceneName.Game);
+        SoundManager.SM.PlayAudio(SoundName.ButtonClick);
     }
     public void ClickGoToMain()
     {
         _changeScene.CallScene(SceneName.Stage);
+        SoundManager.SM.PlayAudio(SoundName.ButtonClick);
     }
     public void ClickGoToNext()
     {
@@ -59,6 +61,7 @@ public class GameMainUI : MonoBehaviour
         PlayerPrefs.SetInt("nowPlaying", next);
         PlayerPrefs.Save();
         _changeScene.CallScene(SceneName.Game);
+        SoundManager.SM.PlayAudio(SoundName.ButtonClick);
     }
     public void CallConversation(Conversation c)
     {
@@ -67,6 +70,7 @@ public class GameMainUI : MonoBehaviour
     }
     public void EndConversation()
     {
+        SoundManager.SM.PlayAudio(SoundName.ButtonClick);
         _conversationUI.gameObject.SetActive(false);
     }
 }

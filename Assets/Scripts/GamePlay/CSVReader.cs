@@ -28,7 +28,7 @@ public class CSVReader : MonoBehaviour
             var values = Regex.Split(lines[i], SPLIT_RE);
             if (values.Length == 0 || values[0] == "") continue;
 
-            Conversation entry = new Conversation(values[0], values[1], values[2], values[3], values[4], values[5]);
+            Conversation entry = new Conversation(values[0], values[1], values[4], values[5], values[2], values[3]);
             list.Add(entry);
         }
         return list;
