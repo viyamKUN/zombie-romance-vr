@@ -17,6 +17,5 @@ public class ConversationUI : MonoBehaviour
         int incorrectNumber = (correctNumber == 0) ? 1 : 0;
         _answerBoxes[correctNumber].SetAnswerBox(true, conversation.GoodAnswer);
         _answerBoxes[incorrectNumber].SetAnswerBox(false, conversation.WrongAnswer);
-        SoundManager.SM.PlayAudio(SoundName.ButtonClick);
     }
 }

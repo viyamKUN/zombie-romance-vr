@@ -70,6 +70,7 @@ public class GameMainUI : MonoBehaviour
     }
     public void EndConversation()
     {
+        SoundManager.SM.PlayAudio(SoundName.ButtonClick);
         _conversationUI.gameObject.SetActive(false);
     }
 }
