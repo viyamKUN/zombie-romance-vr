@@ -63,7 +63,7 @@ MonoBehaviour:
   _dataManager: {fileID: 2207775740048866211}
   _gameMainUI: {fileID: 9171367772377211220}
   _stageLevels:
-  - {fileID: 5770789925827249838, guid: 7594044fe82cc7746a43489c363d534f, type: 3}
+  - {fileID: 5770789925827249838, guid: 283a0454ce00e10428f40c993f6ab6e9, type: 3}
   - {fileID: 5770789925827249838, guid: 54d7a1df3669a9b44a84db9c410fb15d, type: 3}
   - {fileID: 5770789925827249838, guid: 77e50e0bb7720764e9d2500e96e3df41, type: 3}
   - {fileID: 5770789925827249838, guid: bb0796cac24b38148b6274c9407dcbf5, type: 3}
