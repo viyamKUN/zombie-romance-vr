@@ -1402,7 +1402,7 @@ MonoBehaviour:
   _loopingAudio: {fileID: 8446308293994976982}
   _audio: {fileID: 463962440822464738}
   _clips:
-  - {fileID: 8300000, guid: 9d296c8843ef5ed419d8e592de65a486, type: 3}
+  - {fileID: 8300000, guid: f149a68bee21a6145aa657ebd8feb9ee, type: 3}
   - {fileID: 8300000, guid: c7237db03f974fa4c98de0565e191b3d, type: 3}
   - {fileID: 8300000, guid: 5ba0de718dc16534bb6b293e3ec53486, type: 3}
   - {fileID: 8300000, guid: 6f3d94fd93dd3e44fad2a5565378162d, type: 3}
@@ -2328,7 +2328,7 @@ PrefabInstance:
     - target: {fileID: 7091863115997290451, guid: 650990db0b8c748bc9bda1ec1b32dcc7, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9d296c8843ef5ed419d8e592de65a486, type: 3}
+      objectReference: {fileID: 8300000, guid: f149a68bee21a6145aa657ebd8feb9ee, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 650990db0b8c748bc9bda1ec1b32dcc7, type: 3}
 --- !u!4 &465199691100956248 stripped
