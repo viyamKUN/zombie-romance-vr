@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1939900295332969581}
   - component: {fileID: 7815943601915389784}
   m_Layer: 0
-  m_Name: BulletInputHandler
+  m_Name: InputHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

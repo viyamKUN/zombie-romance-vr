@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6503818843237046715}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 45ACP Bullet_Casing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7318399672348373348}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: UCP45 Bullet Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 4809730238590731303}
   - component: {fileID: 5929611328509672229}
   - component: {fileID: -5867777443189192718}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Setting Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 6232338137421965461}
   - component: {fileID: 6232338137420638385}
   - component: {fileID: 6232338137419541105}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 45ACP Casing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 2921984182779272459}
   - component: {fileID: 1048408920527284148}
   - component: {fileID: 1566016554370799125}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pistol_45ACP_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,6 +426,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5503973416769973727}
     m_Modifications:
+    - target: {fileID: 2619411545795113379, guid: c0d8b8d978d727c43916cc6efb1a8323, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2619411545795113379, guid: c0d8b8d978d727c43916cc6efb1a8323, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -509,6 +513,14 @@ PrefabInstance:
     - target: {fileID: 2952147296535256412, guid: c0d8b8d978d727c43916cc6efb1a8323, type: 3}
       propertyPath: m_Name
       value: Effect_Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952147296535256412, guid: c0d8b8d978d727c43916cc6efb1a8323, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952147296535336154, guid: c0d8b8d978d727c43916cc6efb1a8323, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2952147296553449356, guid: c0d8b8d978d727c43916cc6efb1a8323, type: 3}
       propertyPath: ShapeModule.m_Scale.x
