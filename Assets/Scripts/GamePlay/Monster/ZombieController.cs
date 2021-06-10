@@ -32,6 +32,7 @@ public class ZombieController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (!isAlive) return;
         if (GameManager.GM.Doupt >= 1.0)
         {
             if (_myStatus.Equals(ZombieStatus.Attack)) return;
@@ -104,6 +105,7 @@ public class ZombieController : MonoBehaviour
         _zombieAnim.SetTrigger("attack");
         _myStatus = ZombieStatus.Attack;
         GameManager.GM.HP -= 0.1f;
+        SoundManager.SM.PlayAudio(SoundName.PlayerHit);
         playAudioOnce(AudioName.Attack);
     }
 

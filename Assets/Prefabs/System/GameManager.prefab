@@ -105,7 +105,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _myAudio: {fileID: 7523826067701949524}
-  _audios: []
+  _bgmAudio: {fileID: 0}
+  _audios:
+  - {fileID: 8300000, guid: 94f28668842a5fc43833479289b4a25d, type: 3}
+  - {fileID: 8300000, guid: 7e62d3e166cdd524194883aed374995c, type: 3}
+  - {fileID: 8300000, guid: 62855618f57d045478d16de999bf9b8f, type: 3}
+  - {fileID: 8300000, guid: f21f690268bdd5e45a520776568dca32, type: 3}
+  - {fileID: 8300000, guid: 48deefbcbb6c1224b941fb3b7c24adb4, type: 3}
+  - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
+  - {fileID: 8300000, guid: d4176d3edff2dab4db0a8e8aad7953e4, type: 3}
+  - {fileID: 8300000, guid: 0d4364481ee9b264485f70082e368291, type: 3}
+  - {fileID: 8300000, guid: 6ad3f2ddcf1854b70979eb63be7c65d5, type: 3}
+  - {fileID: 8300000, guid: 3c9e6bc48ff4440b4ba9d7c9e4474e9f, type: 3}
+  - {fileID: 8300000, guid: c6c287340d30b0c40a750aa802598010, type: 3}
+  _bgms:
+  - {fileID: 8300000, guid: 88a6cb657dbd20547bc8ceb834527c6f, type: 3}
+  - {fileID: 8300000, guid: 99e2061d02db8474d887488521855e64, type: 3}
 --- !u!82 &7523826067701949524
 AudioSource:
   m_ObjectHideFlags: 0

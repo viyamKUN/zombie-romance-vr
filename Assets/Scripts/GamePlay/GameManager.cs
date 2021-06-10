@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
         string timeStr = (min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec;
 
         _gameMainUI.ShowEndPanel(timeStr, _hp);
+        SoundManager.SM.PlayAudio(SoundName.GameClear);
 
         // TODO 게임 클리어 정보 전달
         _dataManager.SaveGame();
@@ -105,7 +106,7 @@ public class GameManager : MonoBehaviour
     {
         if (!_isHaveCardKey) return false;
 
-        /// Call Door Open
+        SoundManager.SM.PlayAudio(SoundName.CardReader);
         return true;
     }
 
@@ -119,12 +120,14 @@ public class GameManager : MonoBehaviour
     public void Dead()
     {
         _gameMainUI.ShowGameOverPanel();
+        SoundManager.SM.PlayAudio(SoundName.GameOver);
     }
     ZombieController _currentZombie = null;
     public void CallConversation(ZombieController zc)
     {
         _currentZombie = zc;
         _gameMainUI.CallConversation(_dataManager.GetRandomConversation());
+        SoundManager.SM.PlayAudio(SoundName.ConversationEvent);
     }
     public void EndConversation(bool isCorrect)
     {
