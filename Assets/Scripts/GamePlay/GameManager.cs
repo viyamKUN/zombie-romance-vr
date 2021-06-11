@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameMainUI _gameMainUI = null;
     [SerializeField] private GameObject[] _stageLevels = null;
 
-    float _hp = 0.7f;
+    float _hp = 1.0f;
     float _doubt = 0.5f;
     int _bulletCount = 1;
     bool _isHaveCardKey = false;

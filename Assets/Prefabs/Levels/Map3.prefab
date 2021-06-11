@@ -81690,6 +81690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LadderCombinationSample (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -82035,6 +82039,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
       propertyPath: m_Name
       value: LadderCombinationSample (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
       propertyPath: m_RootOrder
@@ -83398,6 +83406,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: LadderCombinationSample
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100090, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -83440,6 +83464,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032884644050746436, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -83525,6 +83553,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
       propertyPath: m_Name
       value: LadderCombinationSample (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 115574f175eb5514f9c26670e37c23f9, type: 3}
       propertyPath: m_RootOrder
