@@ -44,9 +44,10 @@ public class ZombieController : MonoBehaviour
             if (_myStatus.Equals(ZombieStatus.Attack)) return;
 
             float xDis = _playerTransform.position.x - this.transform.position.x;
+            float yDis = _playerTransform.position.y - this.transform.position.y;
             float zDis = _playerTransform.position.z - this.transform.position.z;
 
-            if (Mathf.Abs(xDis) > 1f || Mathf.Abs(zDis) > 1f)
+            if (Mathf.Abs(xDis) > 1f || Mathf.Abs(zDis) > 1f || Mathf.Abs(yDis) > 1f)
             {
                 this.transform.LookAt(_playerTransform);
 
