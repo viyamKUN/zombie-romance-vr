@@ -8,7 +8,7 @@ public class DataManager : MonoBehaviour
 {
     [SerializeField] private int _stageNum = 5;
     [SerializeField] private CSVReader _csvReader = null;
-    private SaveData _mySaveData;
+    public SaveData _mySaveData;
 
     private List<Conversation> _conversationList = null;
 
@@ -22,6 +22,12 @@ public class DataManager : MonoBehaviour
     {
         _mySaveData = new SaveData(name, _stageNum);
         SaveGame();
+    }
+    public void SetStageClearData(int id, int hp, string time)
+    {
+        _mySaveData.StageClear[id].Isclear = true;
+        _mySaveData.StageClear[id].HP = hp;
+        _mySaveData.StageClear[id].UsingTime = time;
     }
     public void SaveGame()
     {

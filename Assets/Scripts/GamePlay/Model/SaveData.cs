@@ -5,12 +5,22 @@ using System.Collections.Generic;
 public class SaveData
 {
     public string UserName = "";
-    public List<int> StageClear = new List<int>();
+    public List<StageSave> StageClear = new List<StageSave>();
 
     public SaveData(string username, int stageCount)
     {
         this.UserName = username;
         for (int i = 0; i < stageCount; i++)
-            StageClear.Add(-1);
+        {
+            StageClear.Add(new StageSave());
+        }
     }
+}
+
+[System.Serializable]
+public class StageSave
+{
+    public bool Isclear = false;
+    public int HP = 100;
+    public string UsingTime = "";
 }

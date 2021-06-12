@@ -638,7 +638,7 @@ Canvas:
   m_GameObject: {fileID: 417639152}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 963194227}
   m_PlaneDistance: 0.5
   m_PixelPerfect: 0
@@ -1253,6 +1253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _changeScene: {fileID: 1023008832}
   _stagesParent: {fileID: 651623262}
+  _data: {fileID: 6428617867097492177}
 --- !u!4 &1023008831
 Transform:
   m_ObjectHideFlags: 0
@@ -2856,3 +2857,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d77dd96ab4c1c4a218352b8c3144e953, type: 3}
+--- !u!114 &6428617867097492177 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6428617866314787833, guid: d77dd96ab4c1c4a218352b8c3144e953, type: 3}
+  m_PrefabInstance: {fileID: 6428617867097492176}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5764501fc9ef246f28737700e702d0a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

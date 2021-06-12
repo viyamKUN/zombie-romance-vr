@@ -6,7 +6,6 @@ using ConversationModles;
 public class CSVReader : MonoBehaviour
 {
     [Header("CSV Files")]
-    [SerializeField] private TextAsset _levelCsvFile = null;
     [SerializeField] private TextAsset _conversationFile = null;
 
     #region For CSV read

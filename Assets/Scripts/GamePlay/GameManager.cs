@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
         _gameMainUI.ShowEndPanel(timeStr, _hp);
         SoundManager.SM.PlayAudio(SoundName.GameClear);
 
-        // TODO 게임 클리어 정보 전달
+        _dataManager.SetStageClearData(PlayerPrefs.GetInt("nowPlaying", 0), (int)(HP * 100), timeStr);
         _dataManager.SaveGame();
     }
 
@@ -68,6 +68,8 @@ public class GameManager : MonoBehaviour
                 _hp = 0;
                 Dead();
             }
+            if (_hp > 1)
+                _hp = 1;
             _gameMainUI.SetHPBar(_hp);
         }
     }

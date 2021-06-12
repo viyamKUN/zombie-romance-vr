@@ -6,16 +6,25 @@ public class StagesUIManager : MonoBehaviour
 {
     [SerializeField] private ChangeScene _changeScene = null;
     [SerializeField] private GameObject _stagesParent = null;
+    [SerializeField] private DataManager _data = null;
     StageUI[] _stageUI;
     private void Start()
     {
+        _data.SetData(out bool isGameDataExut);
+        List<StageSave> stageClearInfo = _data._mySaveData.StageClear;
+
         _stageUI = _stagesParent.GetComponentsInChildren<StageUI>();
         int id = 0;
         foreach (StageUI s in _stageUI)
         {
-            s.SetStageUI(this, id++); // give Save Data
-            // TODO
-            // Blocked unlock stages
+            bool isClear = stageClearInfo[id].Isclear;
+            if (!isClear)
+                s.SetStageUI(this, id++);
+            else
+            {
+                s.SetStageUI(this, id, true, stageClearInfo[id].HP, stageClearInfo[id].UsingTime);
+                id++;
+            }
         }
     }
     public void ClickBack()

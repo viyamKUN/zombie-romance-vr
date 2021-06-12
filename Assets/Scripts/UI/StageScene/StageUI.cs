@@ -11,7 +11,7 @@ public class StageUI : MonoBehaviour
     [SerializeField] private Text _playTime = null;
     StagesUIManager _uiManager = null;
     int thisStageID = 0;
-    public void SetStageUI(StagesUIManager uiManager, int id, bool isClear = false, int hp = 0, float time = 0)
+    public void SetStageUI(StagesUIManager uiManager, int id, bool isClear = false, int hp = 0, string time = "")
     {
         this._uiManager = uiManager;
         this.thisStageID = id;
