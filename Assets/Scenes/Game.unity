@@ -159,7 +159,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 1848510843}
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_AttachTransform: {fileID: 2142779867}
   m_StartingSelectedInteractable: {fileID: 0}
   m_HoverEntered:
@@ -974,7 +974,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 1848510843}
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 264
   m_AttachTransform: {fileID: 0}
   m_StartingSelectedInteractable: {fileID: 0}
   m_HoverEntered:
@@ -2513,7 +2513,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 1848510843}
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 264
   m_AttachTransform: {fileID: 0}
   m_StartingSelectedInteractable: {fileID: 0}
   m_HoverEntered:
